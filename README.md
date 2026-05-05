@@ -27,5 +27,4 @@ SQL integrace nebyla realizována z důvodu prioritizace stability souborového 
 3. **Persistence dat:** * Pro uložení aktuálního stavu použijte v menu volbu **7 (Export do souboru)**.
    * Pro obnovení dat při novém spuštění použijte volbu **8 (Import ze souboru)**.
 
----
-*Vytvořeno jako součást semestrální zkoušky z předmětu PC2T.*
+
