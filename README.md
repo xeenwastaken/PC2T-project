@@ -1,6 +1,6 @@
 # Evidence zaměstnanců (Java Projekt)
 **Autor:** Jakub Žalud [259 525]  
-**Předmět:** PC2-T – Semestrální projekt
+**Předmět:** PC2T – Semestrální projekt
 
 ## Popis projektu
 Aplikace slouží ke správě zaměstnanců ve firmě, rozdělených do dvou specializací: **Datový analytik** a **Bezpečnostní specialista**. Systém umožňuje evidovat vzájemné spolupráce mezi kolegy a vyhodnocovat statistiky týmu.
