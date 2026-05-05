@@ -13,7 +13,7 @@ Aplikace slouží ke správě zaměstnanců ve firmě, rozdělených do dvou spe
 * **Robustnost:** Ošetření uživatelských vstupů proti zadání neplatných datových typů.
 
 ## Poznámka k SQL
-V souladu se zadáním (bod "Pozn. Databáze SQL bude sloužit pouze jako záloha dat, program musí být schopný pracovat i bez použití SQL") projekt využívá pro trvalé uchování dat **serializaci do souboru**. SQL integrace nebyla realizována z důvodu prioritizace plné funkčnosti souborového úložiště a logiky programu.
+SQL integrace nebyla realizována z důvodu prioritizace plné funkčnosti souborového úložiště a logiky programu.
 
 ## Jak spustit
 1. Stáhněte si `.java` soubory.
