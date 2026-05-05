@@ -1,21 +1,34 @@
-# Evidence zaměstnanců (Java Projekt)
-**Autor:** Jakub Žalud [259 525]  
-**Předmět:** PC2T – Semestrální projekt
+🏢 Systém pro evidenci zaměstnanců (PC2T)
+Autor: Jakub Žalud [259 525]
 
-## Popis projektu
-Aplikace slouží ke správě zaměstnanců ve firmě, rozdělených do dvou specializací: **Datový analytik** a **Bezpečnostní specialista**. Systém umožňuje evidovat vzájemné spolupráce mezi kolegy a vyhodnocovat statistiky týmu.
+Instituce: FEKT VUT Brno
 
-### Klíčové funkce:
-* **Správa dat:** Přidávání, mazání a abecední výpis zaměstnanců.
-* **Vazby:** Evidence spoluprací s různou úrovní kvality (Nízká, Střední, Vysoká).
-* **Dovednosti:** Každá skupina má vlastní implementaci výpočtu (analýza počtu vazeb vs. výpočet rizikového skóre).
-* **Persistence:** Ukládání a načítání databáze pomocí serializace do souboru `data.ser`.
-* **Robustnost:** Ošetření uživatelských vstupů proti zadání neplatných datových typů.
+Semestrální projekt: Programování 2 (PC2T)
 
-## Poznámka k SQL
-SQL integrace nebyla realizována z důvodu prioritizace plné funkčnosti souborového úložiště a logiky programu.
+📝 Popis projektu
+Konzolová aplikace v jazyce Java pro efektivní správu personální agendy a analýzu vztahů v týmu. Program rozlišuje mezi různými typy zaměstnanců a využívá objektově orientované principy k modelování jejich dovedností a vazeb.
 
-## Jak spustit
-1. Stáhněte si `.java` soubory.
-2. Importujte je do libovolného IDE (doporučeno Eclipse).
-3. Spusťte třídu `Main.java`.
+🛠️ Technické parametry a OOP přístup
+Projekt je postaven na pevných základech Objektově Orientovaného Programování:
+
+Dědičnost a Polymorfismus: Společný základ v abstraktní třídě Zamestnanec, kterou rozšiřují specializované třídy DatovyAnalytik a BezpecnostniSpecialista.
+
+Dynamické datové struktury: Využití HashMap pro rychlé vyhledávání dle ID a ArrayList pro správu vazeb.
+
+Robustní vstupy: Implementováno komplexní ošetření chyb (InputMismatchException). Program je "neprůstřelný" proti zadání textu do číselných polí.
+
+Vlastní algoritmy: Implementován specifický výpočet rizikového skóre u bezpečnostních specialistů na základě kvality a počtu jejich spoluprací.
+
+💾 Správa dat a SQL
+Data jsou trvale uchovávána pomocí binární serializace do souboru data.ser.
+
+SQL integrace nebyla realizována z důvodu prioritizace stability souborového úložiště a logiky ošetření vstupů.
+
+🚀 Jak program používat
+Sestavení: Importujte soubory do IDE (Eclipse/IntelliJ).
+
+Spuštění: Hlavním vstupním bodem je třída Main.java.
+
+Persistence: * Při prvním spuštění přidejte zaměstnance a použijte volbu 7 (Export) pro vytvoření databáze.
+
+Při dalším spuštění použijte volbu 8 (Import) pro načtení předchozích dat.
