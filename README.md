@@ -1,29 +1,21 @@
-# Databázový systém zaměstnanců (Java PC2 Project)
+# Evidence zaměstnanců (Java Projekt)
+**Autor:** Jakub Žalud [259 525]  
+**Předmět:** PC2-T – Semestrální projekt
 
-Tento projekt je semestrální prací vytvořenou v jazyce **Java** (v prostředí Eclipse). Jedná se o konzolovou aplikaci pro správu zaměstnanců technologické firmy, která klade důraz na objektově orientované programování (OOP) a práci s datovými strukturami.
+## Popis projektu
+Aplikace slouží ke správě zaměstnanců ve firmě, rozdělených do dvou specializací: **Datový analytik** a **Bezpečnostní specialista**. Systém umožňuje evidovat vzájemné spolupráce mezi kolegy a vyhodnocovat statistiky týmu.
 
-## 🚀 Hlavní funkcionality
-- **Správa zaměstnanců:** Přidávání (automatické generování ID), vyhledávání a mazání zaměstnanců.
-- **Skupiny zaměstnanců:** Rozlišení na *Datové analytiky* a *Bezpečnostní specialisty* s unikátními dovednostmi.
-- **Systém spoluprací:** Evidence vazeb mezi kolegy s různou úrovní kvality (špatná, průměrná, dobrá).
-- **Výpočty a dovednosti:** - Algoritmus pro výpočet rizikového skóre u bezpečnostních specialistů.
-  - Analýza společných spolupracovníků u analytiků.
-- **Statistiky:** Určení převažující kvality spolupráce ve firmě a vyhledání nejvíce "propojeného" zaměstnance.
-- **Persistovaná data:** Ukládání a načítání databáze do/z binárních souborů (serializace).
+### Klíčové funkce:
+* **Správa dat:** Přidávání, mazání a abecední výpis zaměstnanců.
+* **Vazby:** Evidence spoluprací s různou úrovní kvality (Nízká, Střední, Vysoká).
+* **Dovednosti:** Každá skupina má vlastní implementaci výpočtu (analýza počtu vazeb vs. výpočet rizikového skóre).
+* **Persistence:** Ukládání a načítání databáze pomocí serializace do souboru `data.ser`.
+* **Robustnost:** Ošetření uživatelských vstupů proti zadání neplatných datových typů.
 
-## 🛠 Použité technologie a principy
-- **OOP:** Využití dědičnosti, abstrakce (abstraktní třída `Zamestnanec`) a zapouzdření.
-- **Kolekce:** Práce s `HashMap` pro efektivní indexování dat a `ArrayList` pro seznamy vazeb.
-- **I/O operace:** Serializace objektů pro trvalé uchování dat.
-- **Java SE 21:** Moderní syntaxe a streamování dat.
+## Poznámka k SQL
+V souladu se zadáním (bod "Pozn. Databáze SQL bude sloužit pouze jako záloha dat, program musí být schopný pracovat i bez použití SQL") projekt využívá pro trvalé uchování dat **serializaci do souboru**. SQL integrace nebyla realizována z důvodu prioritizace plné funkčnosti souborového úložiště a logiky programu.
 
-## 📂 Struktura projektu
-- `Zamestnanec.java` – Abstraktní základ pro všechny role.
-- `DatovyAnalytik.java` / `BezpecnostniSpecialista.java` – Specifické implementace rolí.
-- `SpravceZamestnancu.java` – Hlavní logika pro manipulaci s daty.
-- `Main.java` – Uživatelské rozhraní a interaktivní menu.
-
-## 🔧 Jak spustit
-1. Importujte projekt do IDE (Eclipse, IntelliJ).
-2. Spusťte třídu `Main.java`.
-3. Pro uložení dat mezi restarty použijte volbu v menu pro export do souboru.
+## Jak spustit
+1. Stáhněte si `.java` soubory.
+2. Importujte je do libovolného IDE (doporučeno Eclipse).
+3. Spusťte třídu `Main.java`.
